@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --surface: #f3f8f5;
+  --ink: #1e3c32;
+  --accent: #3d8a6e;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background:
+    radial-gradient(1200px 600px at 10% -10%, #dceee6 0%, transparent 55%),
+    radial-gradient(900px 500px at 100% 0%, #e8f2ec 0%, transparent 50%),
+    var(--surface);
+  min-height: 100vh;
+}
+
+@layer components {
+  .cn-panel {
+    @apply rounded-2xl border border-nest-200/80 bg-white/80 backdrop-blur-sm shadow-nest;
+  }
+  .cn-btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-nest-700 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-nest-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-nest-500;
+  }
+  .cn-btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-nest-200 bg-white/70 px-4 py-2.5 text-sm font-semibold text-nest-800 transition hover:bg-nest-50;
+  }
+  .cn-input {
+    @apply w-full rounded-xl border border-nest-200 bg-white px-3 py-2 text-sm text-nest-900 outline-none ring-nest-400 focus:ring-2;
+  }
+  .cn-label {
+    @apply mb-1 block text-xs font-semibold uppercase tracking-wide text-nest-600;
+  }
+}
