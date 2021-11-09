@@ -1,0 +1,37 @@
+services:
+  carenest-web:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - CARENNEST_API_URL=http://carenest-api:4000
+    depends_on:
+      - carenest-api
+      - carenest-db
+    restart: unless-stopped
+
+  carenest-api:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./:/app
+    command: ["node", "-e", "console.log('CareNest API placeholder')"]
+    environment:
+      - DATABASE_URL=postgres://carenest:carenest@carenest-db:5432/carenest
+    depends_on:
+      - carenest-db
+
+  carenest-db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: carenest
+      POSTGRES_PASSWORD: carenest
+      POSTGRES_DB: carenest
+    volumes:
+      - carenest_pg:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  carenest_pg:
