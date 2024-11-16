@@ -227,6 +227,10 @@ Modules are seeded in-memory for local demos; wire persistence to Postgres (Comp
 
 ---
 
+## Architecture
+
+See [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md) for module layers, runtime notes, and application surfaces.
+
 ## Contributing
 
 We welcome improvements. Please read [CONTRIBUTING.md](./CONTRIBUTING.md) for clone, run, branch, and pull request guidelines. Use the issue and PR templates under `.github/`.
