@@ -1,0 +1,27 @@
+/** CareNest module registry */
+export * as medicationModule from './medication/services/medication-service';
+export * as appointmentsModule from './appointments/services/appointments-service';
+export * as healthLogsModule from './health-logs/services/health-logs-service';
+export * as emergencyAlertsModule from './emergency-alerts/services/emergency-alerts-service';
+export * as mealPlanningModule from './meal-planning/services/meal-planning-service';
+export * as careScheduleModule from './care-schedule/services/care-schedule-service';
+export * as paymentsModule from './payments/services/payments-service';
+export * as reportsModule from './reports/services/reports-service';
+export * as dashboardModule from './dashboard/services/dashboard-service';
+export * as adminModule from './admin/services/admin-service';
+export * as residentsModule from './residents/services/residents-service';
+export * as caregiversModule from './caregivers/services/caregivers-service';
+export * as notificationsModule from './notifications/services/notifications-service';
+export * as billingModule from './billing/services/billing-service';
+export * as inventoryModule from './inventory/services/inventory-service';
+export * as complianceModule from './compliance/services/compliance-service';
+export * as vitalsModule from './vitals/services/vitals-service';
+export * as incidentsModule from './incidents/services/incidents-service';
+export * as familyPortalModule from './family-portal/services/family-portal-service';
+export * as shiftHandoffModule from './shift-handoff/services/shift-handoff-service';
+export * as pharmacyModule from './pharmacy/services/pharmacy-service';
+export * as labResultsModule from './lab-results/services/lab-results-service';
+export * as therapyModule from './therapy/services/therapy-service';
+export * as transportModule from './transport/services/transport-service';
+export * as housingModule from './housing/services/housing-service';
+export * as qualityMetricsModule from './quality-metrics/services/quality-metrics-service';
