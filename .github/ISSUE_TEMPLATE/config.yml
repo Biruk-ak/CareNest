@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: CareNest discussions
+    url: https://github.com/Biruk-ak/CareNest/issues
+    about: Ask questions or share ideas using the issue templates above.
